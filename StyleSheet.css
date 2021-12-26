@@ -6,8 +6,8 @@
 
 .container{
     margin-top: 10%;
-    //background-size: auto;
-    width: 500px;
+    background-size: 1698px 1131px;
+    width: 60%;
     height:400px;
     text-align:center;
     border-radius: 20px;
@@ -15,7 +15,7 @@
 
 .bg{
     position: absolute;
-    width: 500px;
+    width: 60%;
     height:400px;
     background-color: beige;
     opacity: 40%;
