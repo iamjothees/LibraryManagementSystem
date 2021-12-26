@@ -15,7 +15,7 @@
 
 .container{
     margin: 5rem;
-    width: 80vw;
+    width: 60vw;
     height: 80vh;
     text-align:center;
 }
@@ -34,19 +34,19 @@
 .label{
     display: inline-block;
     font-weight:bolder;
-    font-size:x-large;
     color: rgb(2, 2, 2);
-    padding: 1rem 1vw;
-    margin-top: 3rem;
+    padding: 0em 1em;
+    margin-top: 3em;
+    font-size: 1em;
 }
 
 .textBox{
     background-color:black;
     color: beige;
-    padding: 2vh .5vw;
+    padding: 1em 0em;
     text-align:center;
-    font-size: medium;
     border-radius: .5rem;
+    font-size:1em;
 }
 
 .button{
@@ -58,7 +58,6 @@
     margin-right: 15px;
     border-radius: .5rem;
     font-weight: bolder;
-    font-size: larger;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: .5rem 3rem ;
 }
