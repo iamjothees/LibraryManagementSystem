@@ -3,6 +3,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:1698px 1131px;
+    height:10vh;
+    width:100vw;
 }
 
 .center{
@@ -13,14 +15,15 @@
 
 .container{
     margin: 5rem;
-    width: 80%;
+    width: 80vw;
+    height: 80vh;
     text-align:center;
 }
 
 .containerBG{
     position: absolute;
-    width: 25rem;
-    height:25rem;
+    width: 60vw;
+    height:75vh;
     background-color: beige;
     opacity: 40%;
     z-index: -1;
@@ -33,14 +36,14 @@
     font-weight:bolder;
     font-size:x-large;
     color: rgb(2, 2, 2);
-    padding: 1rem;
+    padding: 1rem 1vw;
     margin-top: 3rem;
 }
 
 .textBox{
     background-color:black;
     color: beige;
-    padding: 1rem;
+    padding: 2vh .5vw;
     text-align:center;
     font-size: medium;
     border-radius: .5rem;
@@ -50,7 +53,7 @@
     background-color:ghostwhite;
     opacity: 80%;
     margin-top: 3rem;
-    padding: .5rem;
+    padding: .5rem vw;
     margin-left: 15px;
     margin-right: 15px;
     border-radius: .5rem;
