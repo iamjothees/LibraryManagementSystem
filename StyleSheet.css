@@ -12,19 +12,19 @@
 }
 
 .container{
-    margin: 10%;
+    margin: 5rem;
     width: 80%;
     text-align:center;
 }
 
 .containerBG{
     position: absolute;
-    width: 65%;
-    height:500px;
+    width: 25rem;
+    height:25rem;
     background-color: beige;
     opacity: 40%;
     z-index: -1;
-    border-radius: 30px;
+    border-radius: 1rem;
     
 }
 
@@ -33,29 +33,29 @@
     font-weight:bolder;
     font-size:x-large;
     color: rgb(2, 2, 2);
-    padding: 20px;
-    margin-top: 10%;
+    padding: 1rem;
+    margin-top: 3rem;
 }
 
 .textBox{
     background-color:black;
     color: beige;
-    padding: 20px;
+    padding: 1rem;
     text-align:center;
     font-size: medium;
-    border-radius: 10px;
+    border-radius: .5rem;
 }
 
 .button{
     background-color:ghostwhite;
     opacity: 80%;
-    margin-top: 30px;
-    padding: 10px;
+    margin-top: 3rem;
+    padding: .5rem;
     margin-left: 15px;
     margin-right: 15px;
-    border-radius: 3px;
+    border-radius: .5rem;
     font-weight: bolder;
     font-size: larger;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 10px 30px ;
+    padding: .5rem 3rem ;
 }
