@@ -6,17 +6,35 @@
         <link rel="stylesheet" href="StyleSheet.css">
     </head>
 
-    <body class="bg">
+    <body class="bg" onload="changeWidth()">
         <div class="center">
             <div class="container" >
                 <div class="center"><div class="containerBG"></div></div>
-                <span class="label" style="margin-top: 4em;">User ID</span>
-                <input type="text" size="20" placeholder="(Eg.20BCA05)" class="textBox"><br>
+                <span class="label">User ID</span>
+                <input type="text" placeholder="(Eg.20BCA05)" class="textBox"><br>
                 <span class="label" style="margin-left:-15px;">Password</span>
-                <input type="password" size="20" placeholder="Password" class="textBox"><br>
+                <input type="password" placeholder="Password" class="textBox"><br>
                 <button class="button">LOGIN </button><!-- 
                 <button class="button">CLOSE </button> -->
             </div>
         </div>
     </body>
+    <script>
+        function changeWidth(){
+            if(window.screen.width<500){
+                document.getElementsByClassName('containerBG')[0].style.width="80%";
+                var label = document.getElementsByClassName('label');
+                for(var x of label)
+                    x.style.marginTop="2rem ";
+            }
+            else{
+                document.getElementsByClassName('containerBG')[0].style.width="400px";
+                var label = document.getElementsByClassName('label');
+                for(var x of label)
+                    x.style.marginTop="3em ";
+            }
+        }
+
+        window.addEventListener('resize', changeWidth);
+    </script>
 </html>
