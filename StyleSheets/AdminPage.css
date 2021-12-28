@@ -1,0 +1,10 @@
+body{
+    background-color: chocolate;
+    text-align: center;
+}
+
+.category{
+    background-color:beige;
+    padding: .5em 2em;
+    font-size: 1.1em;
+}
