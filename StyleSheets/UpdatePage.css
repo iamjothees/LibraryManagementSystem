@@ -1,0 +1,33 @@
+.conditionInput{
+    margin-left: 3em;
+}
+
+input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+.bookDetail{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+input, select{
+    margin-left: 2em;
+}
+
+input[type=text]{
+    padding: .5em;
+}
+select{
+    padding: .5em;
+}
+
+input[type=number]{
+    padding: .5em;
+}

@@ -6,13 +6,34 @@
         <link rel="stylesheet" href="../StyleSheets/AdminPage.css">
 
     </head>
-    <body>
+    <body onload="changeWidth()">
         <h1 style="margin-top: 5rem;">Library</h1> 
-        <div>
-            <span class="category">Update</span>
-            <span class="category">Search</span>
-            <span class="category">View Orders</span>
-            <span class="category">Report</span>
+        <div id="category">
+            <span class="category" id="update" onclick="test(this.id)">Update</span>
+            <span class="category" id="search" onclick="test(this.id)">Search</span>
+            <span class="category" id="viewOrder" onclick="test(this.id)">View Orders</span>
+            <span class="category" id="Report" onclick="test(this.id)">Report</span>
         </div>
     </body>
+    <script>
+        function changeWidth(){
+            if(window.screen.width<550){
+                var label = document.getElementsByClassName('category');
+                for(var x of label)
+                    x.style.fontSize=".6em";
+            }
+            else{
+                /* document.getElementById('category').style.margin="0 20%"; */
+                var label = document.getElementsByClassName('category');
+                for(var x of label)
+                    x.style.fontSize="1.1em";
+            }
+        }
+
+        window.addEventListener('resize', changeWidth);
+
+        function test(id){
+            console.log(id);
+        }
+    </script>
 </html>
