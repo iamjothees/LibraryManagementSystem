@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../StyleSheets/UserLoginPage.css">
+        <title>Admin Page</title>
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="../StyleSheets/AdminPage.css">
         <link rel="stylesheet" href="../StyleSheets/UpdatePage.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
-    <body class="center" style="margin-left: 4em;">
-        <div><br>
+    <body onload="changeWidth()" class="center">
+        <h1 style="margin-top: 5rem;">Library</h1> 
+        <div id="category">
+            <span class="category" id="update" onclick="selection(this.id)" style="padding-bottom: 3em;">Update</span>
+            <span class="category" id="search" onclick="selection(this.id)">Search</span>
+            <span class="category" id="viewOrder" onclick="selection(this.id)">View Orders</span>
+            <span class="category" id="Report" onclick="selection(this.id)">Report</span>
+        </div>
+
+
+        <div style="background-color: beige; margin-top: 12em;" ><br>
             <span class="bookDetail" style="margin-left: -2em;">Title</span>
             <input type="text"><br>
             <span class="bookDetail" style="margin-left: -3em;">Author</span>
@@ -37,7 +48,29 @@
             <span class="bookDetail" style="margin-left: -2em;">Price</span>
             <input type="number"><br>           
 
-            <button style="padding:.5em 2.5em; margin-top: 2.5em; border-radius: .4em; background-color: beige; font-weight: bolder; font-size: large;">ADD</button>
+            <button style="padding:.5em 2.5em; margin: 2.5em 0; border-radius: .4em; background-color: beige; font-weight: bolder; font-size: large;">ADD</button>
         </div>
     </body>
+    <script>
+        function changeWidth(){
+            if(window.screen.width<550){
+                var label = document.getElementsByClassName('category');
+                for(var x of label)
+                    x.style.fontSize=".6em";
+            }
+            else{
+                /* document.getElementById('category').style.margin="0 20%"; */
+                var label = document.getElementsByClassName('category');
+                for(var x of label)
+                    x.style.fontSize="1.1em";
+            }
+        }
+
+        window.addEventListener('resize', changeWidth);
+
+        function selection(id){
+            if (id=="update")
+                window.location.href = ("../Category/Update.html");
+        }
+    </script>
 </html>

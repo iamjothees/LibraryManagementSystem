@@ -15,11 +15,10 @@
                 </div>
             </div>
                 <span class="label">User ID</span>
-                <input type="text" placeholder="(Eg.20BCA05)" class="textBox"><br>
+                <input id="userID" type="text" placeholder="(Eg.20BCA05)" class="textBox"><br>
                 <span class="label" style="margin-left:-15px;">Password</span>
-                <input type="password" placeholder="Password" class="textBox"><br>
-                <button class="button">LOGIN </button><!-- 
-                <button class="button">CLOSE </button> -->
+                <input id="password" type="password" placeholder="Password" class="textBox"><br>
+                <button class="button" onclick="login()">LOGIN </button>
             </div>
         </div>
     </body>
@@ -41,7 +40,7 @@
             }
         }
 
-         function changeIcon(y){
+        function changeIcon(y){
             if(y==1){
                 document.getElementById("icon").style.width = "50px";
                 document.getElementById("icon").style.height = "50px";
@@ -52,7 +51,15 @@
                 document.getElementById("icon").style.height = "70px";
                 document.getElementById("icon").style.marginTop = "-35px";
             }
-        } 
+        }
+
+        function login(){
+            var id=document.getElementById('userID').value;
+            var pwd=document.getElementById('password').value;
+            if(id=="Admin" && pwd=="admin@123"){
+                window.location.href = "/Library Management System/Users/AdminPage.html";
+            }
+        }
 
         window.addEventListener('resize', changeWidth);
     </script>
