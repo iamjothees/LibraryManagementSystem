@@ -9,7 +9,7 @@
     <body onload="changeWidth()">
         <h1 style="margin-top: 5rem;">Library</h1> 
         <div id="category">
-            <span class="category" id="update" onclick="selection(this.id)">Update</span>
+            <span class="category" id="addBook" onclick="selection(this.id)">Add Book</span>
             <span class="category" id="search" onclick="selection(this.id)">Search</span>
             <span class="category" id="viewOrder" onclick="selection(this.id)">View Orders</span>
             <span class="category" id="Report" onclick="selection(this.id)">Report</span>
@@ -33,8 +33,8 @@
         window.addEventListener('resize', changeWidth);
 
         function selection(id){
-            if (id=="update")
-                window.location.href = ("/Category/Update.html");
+            if (id=="addBook")
+                window.location.href = ("/Library Management System/Operations/AddBook.html");
         }
     </script>
 </html>
