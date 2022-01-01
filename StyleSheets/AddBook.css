@@ -3,8 +3,14 @@
     justify-content: center;
 }
 
-body{
-}
+/* .containerBG{
+    width: 300px;
+    height: 480px;
+    margin: auto;
+    background-color: beige;
+} */
+
+
 .conditionInput{
     margin-left: 3em;
 }
@@ -15,7 +21,7 @@ input::-webkit-outer-spin-button,
             margin: 0;
         }
 
-        input[type=number] {
+        input[type=number] :not #count {
             -moz-appearance: textfield;
         }
 
@@ -37,4 +43,14 @@ select{
 
 input[type=number]{
     padding: .5em;
+}
+
+input[type=submit]{
+    -webkit-appearance: none;
+    padding:.2em 1em;
+    margin-top: 1em;
+    border-radius: .4em;
+    background-color: silver;
+    font-weight: bolder;
+    font-size: medium;
 }

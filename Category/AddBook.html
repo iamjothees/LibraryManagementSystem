@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/Library Management System/StyleSheets/AddBook.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body class="center">
+        <form class="containerBG" method="post" action="/Library Management System/ServerScripts/AddBook.php">
+            <span class="bookDetail" style="margin-left: -2em;">Title</span>
+            <input type="text" name="title"><br>
+
+            <span class="bookDetail" style="margin-left: -3em;">Author</span>
+            <input type="text" name="author"><br>
+
+            <span class="bookDetail" style="margin-left: -4em;">Category</span>
+            <select name="category">
+                <option value="Biography"> Biography</option>
+                <option value="Computer_Science">Computer Science</option>
+                <option value="Fictional">Fictional</option>
+                <option value="History">History</option>
+                <option value="Reference">Reference</option>
+                <option value="General">General</option>
+                <option value="Others">Others</option>
+            </select><br>
+
+            <span class="bookDetail" style="margin-left: -3.9em;">Language</span>
+            <select name="language">
+                <option value="Tamil">Tamil</option>
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Others">Others</option>
+            </select><br>
+
+            <span class="bookDetail" style="margin-left: -2.6em;">Count</span>
+            <input id="count" name="count" type="number"><br>
+
+            <input type="submit" class="button">
+        </form>
+    </body>
+</html>
