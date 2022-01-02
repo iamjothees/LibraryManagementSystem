@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Search Book </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .center{
+                display: flex;
+                justify-content: center;
+            }
+            input[type=text]{
+                font-size: large;
+                padding: .5em 0em;
+                margin: 5em 0em 1em;
+                text-align: center;
+                
+            }
+            select{
+                font-size: large;
+                padding:.5em;
+                text-align: center;
+                margin:1em .5em;
+            }
+
+            input[type=submit]{
+                padding : .8em 5em;
+                font-size: medium;
+                font-weight: bold;
+                border-radius: .5em;
+                background-color: beige;
+                display: block;
+                margin: auto;
+            }
+            span{
+                font-size: large;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body class="center">
+        <form method="post" action="/Library Management System/ServerScripts/SearchBookResult.php">
+            <input type="text" name="keyword" size=50><br>
+            <div class="center">
+                <span>By</span>
+            <select name="searchIn">
+                
+                <option value="All">Title & Author</option>
+                <option value="Title">Title</option>
+                <option value="Author">Author</option>
+            </select>
+            <span>In</span>
+            <select name="category">
+                <option value="All">All Categories</option>
+                <option value="Biography">Biography</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Fictional">Fictional</option>
+                <option value="History">History</option>
+                <option value="Reference">Reference</option>
+                <option value="General">General</option>
+                <option value="Others">Others</option>
+            </select><br>
+            </div>
+            <input type="submit" value="Search" onclick="func()">
+        </form>
+    </body>
+    <script>
+        function func(){
+            console.log("clicked");
+            var x=5;
+        }
+    </script>
+</html>

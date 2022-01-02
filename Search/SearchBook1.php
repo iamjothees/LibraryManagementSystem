@@ -6,7 +6,9 @@
     </head>
 
     <body>
-        <form method="post" action="SearchBookResult.php">
+        <?php
+            echo '<form method="post" action="SearchBookPhp.php" name="adminSearch" value=$whoseSearch>';
+        ?>
             <input type="text" name="keyword">
             <select name="searchIn">
                 <option value="All">All</option>

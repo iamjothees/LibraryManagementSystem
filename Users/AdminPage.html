@@ -10,7 +10,7 @@
         <h1 style="margin-top: 5rem;">Library</h1> 
         <div id="category">
             <span class="category" id="addBook" onclick="selection(this.id)">Add Book</span>
-            <span class="category" id="search" onclick="selection(this.id)">Search</span>
+            <span class="category" id="searchBook" onclick="selection(this.id)">Search</span>
             <span class="category" id="viewOrder" onclick="selection(this.id)">View Orders</span>
             <span class="category" id="Report" onclick="selection(this.id)">Report</span>
         </div>
@@ -31,10 +31,14 @@
         }
 
         window.addEventListener('resize', changeWidth);
-
+        console.log("Clicked");
         function selection(id){
-            if (id=="addBook")
-                window.location.href = ("/Library Management System/Operations/AddBook.html");
+            switch(id){
+                case 'addBook':
+                window.location.href = ("/Library Management System/Operations/AddBook.html");break;
+                case 'searchBook':
+                window.location.href = ("/Library Management System/Operations/SearchBook.html");break;
+                default:break;} 
         }
     </script>
 </html>
