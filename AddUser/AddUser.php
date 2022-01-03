@@ -2,7 +2,7 @@
     .report{
         display: flex;
         justify-content: center;
-        font-size: larger;
+        font-size: x-large;
     }
 </style>
 
@@ -44,7 +44,7 @@ VALUES ('$name', '$age', '$phNumber', '$email', '$address', '$password')";
     $updateUserID = "UPDATE `UserDetail` SET `UserID` = '$userID' WHERE `id` = '$lastID'";
     $conn->query($updateUserID);
     
-    echo "<strong class='report'>New User Created successfully</strong><br>";
+    echo "<strong class='report' style='margin-top:5em'>New User Created successfully</strong><br>";
     echo "<span class = 'report'>UserID: " . $userID . "<br>Password: " . $password . "</span>";
     
     

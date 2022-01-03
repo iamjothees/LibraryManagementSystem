@@ -27,6 +27,11 @@
                 font-size: medium;
                 font-weight: bold;
             }
+            #back{
+                padding : .5em;
+                font-size: small;
+                font-weight: bold;
+            }
         </style>
     </head>
 
@@ -76,6 +81,9 @@
                 }
             ?>
         </div>
-        <br><a href="/Library Management System/ViewOrder.php" class = "center"><button>View/Place Order</button> </a>
+        <br>
+        <a href="/Library Management System/Operations/SearchBook.html"><button id='back' style="display: inline-block;">&lt&lt</button> </a>
+        <a href="/Library Management System/IssueBook/IssueBook1.php" class="center"><button>View/Place Order</button> </a>
     </body>
+    
 </html>
