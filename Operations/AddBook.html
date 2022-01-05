@@ -5,37 +5,77 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body class="center">
-        <form method="post" action="/Library Management System/ServerScripts/AddBook.php">
-            <span class="bookDetail" style="margin-left: -2em;">Title</span>
-            <input type="text" name="title"><br>
+    <body class="bg" onload="changeWidth()">
+        <div class="center">
+            <div class="container">
+                <div class="center"><div class="containerBG">
+                </div>
+            </div>
+            <form method="post" action="/Library Management System/ServerScripts/AddBook.php">
+                <span class="bookDetail" style="margin-left: 0em">Title</span>
+                <input type="text" name="title"><br>
 
-            <span class="bookDetail" style="margin-left: -3em;">Author</span>
-            <input type="text" name="author"><br>
+                <span class="bookDetail" style="margin-left: -1em">Author</span>
+                <input type="text" name="author"><br>
 
-            <span class="bookDetail" style="margin-left: -4em;">Category</span>
-            <select name="category">
-                <option value="Biography"> Biography</option>
-                <option value="Computer_Science">Computer Science</option>
-                <option value="Fictional">Fictional</option>
-                <option value="History">History</option>
-                <option value="Reference">Reference</option>
-                <option value="General">General</option>
-                <option value="Others">Others</option>
-            </select><br>
+                <div class="bookDetail" style="margin-left: -5em;">Category</div>
+                <select name="category">
+                    <option value="Biography"> Biography</option>
+                    <option value="Computer_Science">Computer Science</option>
+                    <option value="Fictional">Fictional</option>
+                    <option value="History">History</option>
+                    <option value="Reference">Reference</option>
+                    <option value="General">General</option>
+                    <option value="Others">Others</option>
+                </select><br>
 
-            <span class="bookDetail" style="margin-left: -3.9em;">Language</span>
-            <select name="language">
-                <option value="Tamil">Tamil</option>
-                <option value="English">English</option>
-                <option value="Hindi">Hindi</option>
-                <option value="Others">Others</option>
-            </select><br>
+                <div class="bookDetail" style="margin-left: -9.5em;">Language</div>
+                <select name="language">
+                    <option value="Tamil">Tamil</option>
+                    <option value="English">English</option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="Others">Others</option>
+                </select><br>
 
-            <span class="bookDetail" style="margin-left: -2.6em;">Count</span>
-            <input id="count" name="count" type="number"><br>
+                <span class="bookDetail" style="margin-left: -1em;">Count</span>
+                <input id="count" name="count" type="number"><br>
 
-            <input type="submit" class="button">
-        </form>
+                <input type="submit" class="button">
+            </form>
+        </div>
     </body>
+
+    <script>
+        function changeWidth(){
+            if(window.screen.width<500){
+                document.getElementsByClassName('containerBG')[0].style.width="80%";
+                var label = document.getElementsByClassName('label');
+                for(var x of label)
+                    x.style.marginTop="2rem ";
+                changeIcon(1);
+            }
+            else{
+                document.getElementsByClassName('containerBG')[0].style.width="400px";
+                var label = document.getElementsByClassName('label');
+                for(var x of label)
+                    x.style.marginTop="3em ";
+                changeIcon(0);
+            }
+        }
+
+        function changeIcon(y){
+            if(y==1){
+                document.getElementById("icon").style.width = "50px";
+                document.getElementById("icon").style.height = "50px";
+                document.getElementById("icon").style.marginTop = "-25px";
+            }
+            else{
+                document.getElementById("icon").style.width = "70px";
+                document.getElementById("icon").style.height = "70px";
+                document.getElementById("icon").style.marginTop = "-35px";
+            }
+        }
+
+        window.addEventListener('resize', changeWidth);
+    </script>
 </html>
