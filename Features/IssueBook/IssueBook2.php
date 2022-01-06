@@ -36,13 +36,13 @@
         while ( $displayRow = $display->fetch_assoc()){
             echo "<tr>" . "<td>".   $displayRow['ID'] . "</td> <td>" .  $displayRow['Title'] . "</td> <td>" .  $displayRow['Author'] . "</td> <td>" .
             $displayRow['Category'] . "</td> <td>" .  $displayRow['Language'] . "</td> <td>" .  $displayRow['Count'] .
-            "<td><button onclick='issueBookResult()'>  Issue   </button></td>" . "</tr>" . "<br>";
+            "</td> <td><button onclick='issueBookResult()'>  Issue   </button></td>" . "</tr>" . "<br>";
         }
         echo '</table> <br>';
     }
 ?>
 <script>
     function issueBookResult(){
-        window.location.href = "../ServerScripts/IssueBookResult.php";
+        window.location.href = "IssueBookResult.php";
     }
 </script>

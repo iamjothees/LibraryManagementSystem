@@ -1,37 +1,17 @@
-<!DOCTYPE html>
-
-<?php
-/*     if (isset($_POST['submit'])){
-        include '../ServerScripts/DatabaseConnection.php';
-        $idNo = $_POST['idNo'];
-        $selectIdRowQuery = "SELECT * FROM `AvailableBooks` WHERE `ID` = $idNo";
-        $display = $conn->query($selectIdRowQuery);
-
-        echo '<table>
-        <tr style="border-bottom: 1em solid black;">
-            <th>ID</th> <th>Title</th> <th>Author</th>
-            <th>Category</th> <th>Language</th> <th>Count</th>
-        </tr>';
-        while ( $displayRow = $display->fetch_assoc()){
-            echo "<tr>" . "<td>".   $displayRow['ID'] . "</td> <td>" .  $displayRow['Title'] . "</td> <td>" .  $displayRow['Author'] . "</td> <td>" .
-            $displayRow['Category'] . "</td> <td>" .  $displayRow['Language'] . "</td> <td>" .  $displayRow['Count'] . "</tr>" . "<br>";
-        }
-        echo '</table>';
-    }*/
-?>
-
+<?php   session_start();    ?>
 <html>
     <head>
-
         <style>
             input[type=number]{
                 padding: 1em;
             }
+
             .center{
                 display: flex;
                 justify-content: center;
                 margin-top: 5em;
             }
+
             input[type=submit]{
                 padding : .8em 2em;
                 font-size: medium;
@@ -47,6 +27,7 @@
             }
         </style>
     </head>
+
     <body>
         <div class="center">
         <form method="POST" action="">

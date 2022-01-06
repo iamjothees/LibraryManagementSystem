@@ -1,6 +1,22 @@
+.bg{
+    background-image:url(../../../Images/Background.jpg);
+    background-color: blueviolet;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:1698px 1131px;
+    margin: 0 10em 0 ;
+}
+
 .center{
     display: flex;
     justify-content: center;
+}
+
+.container{
+    margin-top: 3em;
+    width: 400px;
+    height: 400px;
+    text-align:center;
 }
 
 .containerBG{
@@ -17,19 +33,20 @@
     margin-left: 3em;
 }
 
-    input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-        }
+input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 
-        input[type=number]{
-            -moz-appearance: textfield;
-        }
+    input[type=number]{
+        -moz-appearance: textfield;
+    }
 
 .userDetail{
     display: inline-block;
     margin-top: 1em;
+    font-weight:bold
 }
 
 input, select, textarea{
@@ -55,4 +72,13 @@ input[type=submit]{
     background-color: silver;
     font-weight: bolder;
     font-size: medium;
+}
+
+.backButton{
+    position:fixed;
+    left: 1em;
+    bottom: 1em;
+    padding:.5em 2em;
+    font-weight: bolder;
+    font-size: large;
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="AddUser.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body class="bg">
+        <div class="center">
+            <div class="container">
+                <div class="center">
+                    <div class="containerBG">
+                    </div>
+                </div>
+
+                <form method="post" action="AddUser.php">
+                    <span class="userDetail" style="margin-left: -.7em;">Name</span>
+                    <input type="text" name="name"><br>
+
+                    <span class="userDetail" style="margin-left: 0em;">Age</span>
+                    <input type="number" name="age"><br>
+
+                    <span class="userDetail" style="margin-left: -4.2em;">Phone Number</span>
+                    <input type="tel"  pattern="[0-9]{10}" name="phNumber"><br>
+
+                    <span class="userDetail" style="margin-left: -1.8em;">Email-Id</span>
+                    <input type="email" name="email"><br>
+
+                    <span class="userDetail" style="margin-left: -1.5em;">Address</span>
+                    <textarea rows="5" cols="20" name="address" style="margin-top: 1em;" value="zdbvadvzvzdvzvzv"></textarea><br>
+
+                    <span class="userDetail" style="margin-left: -2em;">Password</span>
+                    <input type="text" name="password"><br>
+
+                    <input type="submit" class="button" value="ADD">
+                </form>
+            </div>
+        </div>
+        <a href="../../Users/Admin.html"><button class="backButton">&lt&lt&lt</button></a>
+    </body>
+
+    <script>
+        function changeWidth(){
+            if(window.screen.width<565){
+                document.getElementsByClassName('containerBG')[0].style.width="90%";
+                document.getElementsByClassName('containerBG')[0].style.height="600px";
+            }
+            else{
+                document.getElementsByClassName('containerBG')[0].style.width="400px";
+                document.getElementsByClassName('containerBG')[0].style.height="400px";
+                
+            }
+        }
+
+        window.addEventListener('resize', changeWidth);
+    </script>
+</html>

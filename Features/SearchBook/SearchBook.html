@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Search Book </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .bg {
+            background-image: url(../../../Images/Background.jpg);
+            background-color: blueviolet;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1698px 1131px;
+            margin: 0 10em 0;
+
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            margin-top: 3em;
+            width: 400px;
+            height: 400px;
+            text-align: center;
+        }
+
+        .containerBG {
+            position: absolute;
+            width: 800px;
+            height: 400px;
+            margin-top: 1.5em;
+            background-color: beige;
+            opacity: 40%;
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        input[type=text] {
+            font-size: large;
+            padding: .5em 0em;
+            margin: 5em 0em 1em;
+            text-align: center;
+        }
+
+        select {
+            font-size: large;
+            padding: .5em;
+            text-align: center;
+            margin: 1em .5em;
+        }
+
+        input[type=submit] {
+            padding: .8em 5em;
+            font-size: medium;
+            font-weight: bold;
+            border-radius: .5em;
+            background-color: beige;
+            display: block;
+            margin: auto;
+        }
+
+        span {
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .backButton{
+            position:fixed;
+            left: 1em;
+            bottom: 1em;
+            padding:.5em 2em;
+            font-weight: bolder;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body class="bg">
+    <div class="center">
+        <div class="container">
+            <div class="center">
+                <div class="containerBG">
+                </div>
+            </div>
+
+            <form method="POST" action="SearchBookResult.php">
+                <input type="text" name="keyword" size=50><br>
+                <div class="center">
+                    <span>By</span>
+                    <select name="searchIn">
+
+                        <option value="All">Title & Author</option>
+                        <option value="Title">Title</option>
+                        <option value="Author">Author</option>
+                    </select>
+                    <span>In</span>
+                    <select name="category">
+                        <option value="All">All Categories</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Fictional">Fictional</option>
+                        <option value="History">History</option>
+                        <option value="Reference">Reference</option>
+                        <option value="General">General</option>
+                        <option value="Others">Others</option>
+                    </select><br>
+                </div>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <a href="../../Users/Admin.html"><button class="backButton">&lt&lt&lt</button></a>
+</body>
+
+<script>
+    function changeWidth() {
+        if (window.screen.width < 800) {
+            document.getElementsByClassName('containerBG')[0].style.width = "90%";
+            document.getElementsByName('keyword')[0].setAttribute('size', '27');
+        }
+        else {
+            document.getElementsByClassName('containerBG')[0].style.width = "800px%";
+            document.getElementsByName('keyword')[0].setAttribute('size', '50');
+
+        }
+    }
+
+    window.addEventListener('resize', changeWidth);
+</script>
+
+</html>

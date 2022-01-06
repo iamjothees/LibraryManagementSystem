@@ -15,18 +15,7 @@
     // Create connection
     $conn = new mysqli($serverName, $userName, $password, $dbName);
 
-    // Check connection
-    /* if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }else
-        echo "connected"; */
-    //require `/Library Management System/ServerScripts/DatabaseConnection.php`;
-    /* $conn->query("INSERT INTO UserDetail () VALUES ()");
-    echo $conn->insert_id;echo "Something";
-    $userID = "22UDT" + (string)$conn->insert_id; */
-
     //get values from form
-
     $name = $_POST['name'];
     $age = $_POST['age'];
     $phNumber= $_POST['phNumber'];
@@ -49,7 +38,7 @@ VALUES ('$name', '$age', '$phNumber', '$email', '$address', '$password')";
     
     
     
-    echo '<a href="/Library Management System/Operations/AddBook.html"><button>Back</button>';
+    echo '<a href="AddUser.html"><button class=backButton>&lt&lt&lt</button>';
 
     $conn->close();
 ?>

@@ -7,7 +7,7 @@
 </style>
 
 <?php
-    include 'DatabaseConnection.php';
+    include '../ServerScripts/DatabaseConnection.php';
 
     $selectIDQuery = "SELECT ID FROM AvailableBooks";
 
@@ -50,7 +50,7 @@ VALUES ('$title', '$author', '$category', '$language', '$count')";
         include 'ShowTable.php';
     }
 
-    echo '<a href="/Library Management System/Operations/AddBook.html"><button>Back</button>';
+    echo '<a href="AddBook.html"><button>Back</button>';
 
     $conn->close();
 ?>

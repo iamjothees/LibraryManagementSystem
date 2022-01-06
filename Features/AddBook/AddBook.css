@@ -1,10 +1,11 @@
 .bg{
-    background-image:url(../Images/Background.jpg);
+    background-image:url(../../../Images/Background.jpg);
     background-color: blueviolet;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:1698px 1131px;
-    margin: 0  6rem;   /* Completed */
+    margin: 0 10em 0 ;
+
 }
 
 .center{
@@ -33,6 +34,7 @@
 .bookDetail{
     display: inline-block;
     margin-top: 1em;
+    font-weight:bold;
 }
 
 input, select{
@@ -56,4 +58,13 @@ input[type=submit]{
     background-color: silver;
     font-weight: bolder;
     font-size: medium;
+}
+
+.backButton{
+    position:fixed;
+    left: 1em;
+    bottom: 1em;
+    padding:.5em 2em;
+    font-weight: bolder;
+    font-size: large;
 }

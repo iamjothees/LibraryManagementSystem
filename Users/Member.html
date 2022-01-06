@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Member</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .bg{
+                background-image:url(../../Images/Background.jpg);
+                background-color: blueviolet;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size:1698px 1131px;
+                margin: 0px  6rem;   /* Completed */
+            }
+
+            .center{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+
+            h1{
+                margin-top: 5rem;
+            }
+
+            .features{
+                display: inline-block;
+                background-color:beige;
+                padding: .5em 2em;
+                font-size: 1.1em;
+                margin: 0 0 1em;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body onload="changeWidth()" class="bg">
+        <h1></h1> 
+        <div>
+            <div class="center">
+                <div id="features">
+                    <span class="features" id="searchBook" onclick="selection(this.id)">Search</span>
+                    <span class="features" id="dueDate" onclick="selection(this.id)">Due Date</span>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function changeWidth(){
+            if(window.screen.width<550){
+                var label = document.getElementsByClassName('features');
+                for(var x of label)
+                    x.style.fontSize=".8em";
+            }
+            else{
+                var label = document.getElementsByClassName('features');
+                for(var x of label)
+                    x.style.fontSize="1.1em";
+            }
+        }
+
+        window.addEventListener('resize', changeWidth);
+        console.log("Clicked");
+        function selection(id){
+            switch(id){
+                case 'searchBook':
+                window.location.href = ("../Features/SearchBook/SearchBook.html");break;
+                case 'issueBook':
+                window.location.href = ("Features/IssueBook/IssueBook1.php");break;
+                default:break;} 
+        }
+    </script>
+</html>

@@ -3,22 +3,24 @@
     <head>
         <title> Login </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="StyleSheets/UserLoginPage.css">
+        <link rel="stylesheet" href="Login.css">
     </head>
 
     <body class="bg" onload="changeWidth()">
         <div class="center">
-            <div class="container" >
-                <div class="center"><div class="containerBG">
-                    
-                    <img src="Images/UserIcon.png" id="icon">
-                </div>
-            </div>
-                <span class="label">User ID</span>
-                <input id="userID" type="text" placeholder="(Eg.20BCA05)" class="textBox"><br>
-                <span class="label" style="margin-left:-15px;">Password</span>
-                <input id="password" type="password" placeholder="Password" class="textBox"><br>
-                <button class="button" onclick="login()">LOGIN </button>
+            <div class="container">
+                    <div class="center">
+                        <div class="containerBG">        
+                            <img src="../Images/UserIcon.png" id="icon">
+                        </div>
+                    </div>
+                <form method="POST" action="CheckUser/CheckUser.php">
+                    <span class="label">User ID</span>
+                    <input id="userID" type="text" placeholder="(Eg.22UDTxxx)" name="userID" class="textBox"><br>
+                    <span class="label" style="margin-left:-15px;">Password</span>
+                    <input id="password" type="password" placeholder="Password" name="password" class="textBox"><br>
+                    <button class="button" onclick="login()">LOGIN </button>
+                <form>
             </div>
         </div>
     </body>
@@ -50,14 +52,6 @@
                 document.getElementById("icon").style.width = "70px";
                 document.getElementById("icon").style.height = "70px";
                 document.getElementById("icon").style.marginTop = "-35px";
-            }
-        }
-
-        function login(){
-            var id=document.getElementById('userID').value;
-            var pwd=document.getElementById('password').value;
-            if(id=="Admin" && pwd=="admin@123"){
-                window.location.href = "/Library Management System/Users/AdminPage.html";
             }
         }
 

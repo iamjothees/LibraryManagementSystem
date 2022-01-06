@@ -1,21 +1,21 @@
 <?php
     session_start();
 
-    $id = $_POST['userID'];
-    $pwd=$_POST['password'];
+    $_SESSION['userID'] = $_POST['userID'];
+    $_SESSION['pwd']=$_POST['password'];
     $loginFlag=false;
-    if ($id=="Admin" && $pwd=="admin@123"){
-        header("location:../../Users/AdminPage.html");
+    if ($_SESSION['userID']=='Admin' && $_SESSION['pwd']=='admin@123'){
+        header("location:../../Users/Admin.html");
     }
     else{
-        include "../../ServerScripts/DatabaseConnection.php";
+        include "../../Features/ServerScripts/DatabaseConnection.php";
         $query1 = "SELECT `UserID`, `Password` FROM `UserDetail`";
         $result = $conn->query($query1);
         
         while ($resultRow = $result->fetch_assoc()){
-            echo "$id == $resultRow[UserID] && $pwd==$resultRow[Password]<br>";
-            if ($id== $resultRow['UserID'] && $pwd==$resultRow['Password']){
-                header("location:../../Users/UserPage.html");
+            echo "$_SESSION[userID] == $resultRow[UserID] && $_SESSION[pwd]==$resultRow[Password]<br>";
+            if ($_SESSION['userID']== $resultRow['UserID'] && $_SESSION['pwd']==$resultRow['Password']){
+                header("location:../../Users/Member.html");
                 $loginFlag=true;
             }
         }

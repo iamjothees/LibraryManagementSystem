@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../StyleSheets/AddBook.css">
+        <link rel="stylesheet" href="AddBook.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body class="bg" onload="changeWidth()">
         <div class="center">
             <div class="container">
-                <div class="center"><div class="containerBG">
+                <div class="center">
+                    <div class="containerBG">
+                    </div>
                 </div>
-            </div>
-            <form method="post" action="/Library Management System/ServerScripts/AddBook.php">
+            <form method="post" action="AddBook.php">
                 <span class="bookDetail" style="margin-left: 0em">Title</span>
                 <input type="text" name="title"><br>
 
@@ -43,36 +44,16 @@
                 <input type="submit" class="button">
             </form>
         </div>
+        <a href="../../Users/Admin.html"><button class="backButton">&lt&lt&lt</button></a>
     </body>
 
     <script>
         function changeWidth(){
             if(window.screen.width<500){
                 document.getElementsByClassName('containerBG')[0].style.width="80%";
-                var label = document.getElementsByClassName('label');
-                for(var x of label)
-                    x.style.marginTop="2rem ";
-                changeIcon(1);
             }
             else{
                 document.getElementsByClassName('containerBG')[0].style.width="400px";
-                var label = document.getElementsByClassName('label');
-                for(var x of label)
-                    x.style.marginTop="3em ";
-                changeIcon(0);
-            }
-        }
-
-        function changeIcon(y){
-            if(y==1){
-                document.getElementById("icon").style.width = "50px";
-                document.getElementById("icon").style.height = "50px";
-                document.getElementById("icon").style.marginTop = "-25px";
-            }
-            else{
-                document.getElementById("icon").style.width = "70px";
-                document.getElementById("icon").style.height = "70px";
-                document.getElementById("icon").style.marginTop = "-35px";
             }
         }
 
