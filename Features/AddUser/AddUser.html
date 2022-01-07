@@ -27,7 +27,7 @@
                     <input type="email" name="email"><br>
 
                     <span class="userDetail" style="margin-left: -1.5em;">Address</span>
-                    <textarea rows="5" cols="20" name="address" style="margin-top: 1em;" value="zdbvadvzvzdvzvzv"></textarea><br>
+                    <textarea rows="5" cols="20" name="address" style="margin-top: 1em;"></textarea><br>
 
                     <span class="userDetail" style="margin-left: -2em;">Password</span>
                     <input type="text" name="password"><br>
@@ -53,13 +53,16 @@
             else{
                 document.getElementsByClassName('containerBG')[0].style.width="400px";
                 document.getElementsByClassName('containerBG')[0].style.height="400px";
+
+                x = document.getElementsByClassName('userDetail');
+                for (i=0; i<x.length;i++)
+                    x[i].style.display="inline-block";
+                
+                x[0].style.marginLeft="-0.7em";    x[1].style.marginLeft="0em";    x[2].style.marginLeft="-4.2em";
+                x[3].style.marginLeft="-1.8em";    x[4].style.marginLeft="-1.5em";    x[5].style.marginLeft="-2em";
                 
             }
         }
-
-
-        
-
         window.addEventListener('resize', changeWidth);
     </script>
 </html>

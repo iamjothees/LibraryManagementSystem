@@ -4,6 +4,15 @@
         justify-content: center;
         font-size: x-large;
     }
+
+    .backButton{
+        position:fixed;
+        left: 1em;
+        bottom: 1em;
+        padding:.5em 2em;
+        font-weight: bolder;
+        font-size: large;
+    }
 </style>
 
 <?php
