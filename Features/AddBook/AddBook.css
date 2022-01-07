@@ -1,11 +1,10 @@
 .bg{
-    background-image:url(../../../Images/Background.jpg);
+    background-image:url(../../Images/Background.jpg);
     background-color: blueviolet;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:1698px 1131px;
-    margin: 0 10em 0 ;
-
+    
 }
 
 .center{
@@ -15,15 +14,15 @@
 
 .container{
     margin-top: 3em;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     text-align:center;
 }
 
 .containerBG{
     position: absolute;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     margin-top: -1.5em;
     background-color: beige;
     opacity: 40%;
@@ -45,10 +44,9 @@ input[type=text], select, input[type=number]{
     padding: .5em;
 }
 
-select{
-    position:inherit;
+#count{
+    width: 3em;
 }
-
 
 input[type=submit]{
     -webkit-appearance: none;
@@ -58,6 +56,7 @@ input[type=submit]{
     background-color: silver;
     font-weight: bolder;
     font-size: medium;
+    margin-left: 0;
 }
 
 .backButton{

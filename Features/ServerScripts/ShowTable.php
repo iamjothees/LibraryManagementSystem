@@ -31,7 +31,7 @@
     <div class = "center">
         <table>
             <tr style="border-bottom: 1em solid black;">
-                <th>ID</th> <th>Title</th> <th>Author</th>
+                <th>S.no</th> <th>Book ID</th> <th>Title</th> <th>Author</th>
                 <th>Category</th> <th>Language</th> <th>Count</th>
                 <th>Available</th>
             </tr>';
@@ -39,11 +39,11 @@
     global $conn;
     $selectAllQuery = "SELECT * FROM AvailableBooks";
     $display = $conn->query($selectAllQuery);
+    
+    $sNo=0;
     while ( $displayRow = $display->fetch_assoc()){
-        echo "<tr>" . "<td>".   $displayRow['ID'] . "</td> <td>" .  $displayRow['Title'] . "</td> <td>" .  $displayRow['Author'] . "</td> <td>" .
+        echo "<tr>" . "<td>" . ++$sNo . "</td> <td>" . $displayRow['ID'] . "</td> <td>" .  $displayRow['Title'] . "</td> <td>" .  $displayRow['Author'] . "</td> <td>" .
         $displayRow['Category'] . "</td> <td>" .  $displayRow['Language'] . "</td> <td>" .  $displayRow['Count'] . "</td> <td>" .  $displayRow['AvailableCount'] . "</td> </tr>" . "<br>";
     }
-    echo '
-        </table>
-    </div>';
+    echo ' </table> </div>';
 ?>

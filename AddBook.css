@@ -5,6 +5,7 @@
     background-attachment: fixed;
     background-size:1698px 1131px;
     margin: 0 10em 0 ;
+
 }
 
 .center{
@@ -23,46 +24,31 @@
     position: absolute;
     width: 400px;
     height: 400px;
-    margin: auto;
+    margin-top: -1.5em;
     background-color: beige;
-    opacity: 30%;
+    opacity: 40%;
     z-index: -1;
+    border-radius: 10px;
 }
 
-.conditionInput{
-    margin-left: 3em;
-}
-
-input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    input[type=number]{
-        -moz-appearance: textfield;
-    }
-
-.userDetail{
+.bookDetail{
     display: inline-block;
     margin-top: 1em;
-    font-weight:bold
+    font-weight:bold;
 }
 
-input, select, textarea{
+input, select{
     margin-left: 2em;
 }
 
-input[type=text], input[type=email], input[type=tel], textarea{
-    padding: .5em;
-}
-select{
+input[type=text], select, input[type=number]{
     padding: .5em;
 }
 
-input[type=number]{
-    padding: .5em;
+select{
+    position:inherit;
 }
+
 
 input[type=submit]{
     -webkit-appearance: none;

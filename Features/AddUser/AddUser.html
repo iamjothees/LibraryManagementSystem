@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body class="bg">
+    <body class="bg" onload="changeWidth()">
         <div class="center">
             <div class="container">
                 <div class="center">
@@ -43,7 +43,12 @@
         function changeWidth(){
             if(window.screen.width<565){
                 document.getElementsByClassName('containerBG')[0].style.width="90%";
-                document.getElementsByClassName('containerBG')[0].style.height="600px";
+                document.getElementsByClassName('containerBG')[0].style.height="32.8em";
+                x = document.getElementsByClassName('userDetail');
+                for (i=0; i<x.length;i++){
+                    x[i].style.display="block";
+                    x[i].style.marginLeft="0";
+                }
             }
             else{
                 document.getElementsByClassName('containerBG')[0].style.width="400px";
@@ -51,6 +56,9 @@
                 
             }
         }
+
+
+        
 
         window.addEventListener('resize', changeWidth);
     </script>

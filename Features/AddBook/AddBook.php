@@ -4,6 +4,15 @@
         justify-content: center;
         font-size: larger;
     }
+
+        .backButton{
+            position:fixed;
+            left: 1em;
+            bottom: 1em;
+            padding:.5em 2em;
+            font-weight: bolder;
+            font-size: large;
+        }
 </style>
 
 <?php
@@ -52,7 +61,7 @@ VALUES ('$title', '$author', '$category', '$language', '$count', $count)";
         include '../ServerScripts/ShowTable.php';
     }
 
-    echo '<a href="AddBook.html"><button>Back</button>';
+    echo '<a href="AddBook.html"><button class="backButton">&lt&lt&lt</button></a>';
 
     $conn->close();
 ?>
