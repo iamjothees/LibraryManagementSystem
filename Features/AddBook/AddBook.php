@@ -18,15 +18,17 @@
     $language = $_POST['language'];
     $condition = $_POST['condition'];
     $count = $_POST['count'];
+    $availableCount = 0;
     
     $flag = false;
     $avlID;
 
-    // Check if Book already available
-     $selectAllQuery = "SELECT * FROM AvailableBooks";
-    $result = $conn->query( $selectAllQuery);
+    // Check if Book already exist
+    $selectAllQuery = "SELECT * FROM AvailableBooks";
+    $result = $conn->query($selectAllQuery);
     while ($row = $result->fetch_assoc()){
         if( $row['Title']==$title && $row['Author']==$author && $row['Language']==$language ){
+            $availableCount = $row['AvailableCount'] + $count;
             $count =  $row['Count'] + $count;
             $GLOBALS['avlID'] = $row['ID'];
             $GLOBALS['flag'] = true;
@@ -36,18 +38,18 @@
 
     if ($flag == true){
         // Add count of existing book
-        $addCountQuery = "UPDATE `AvailableBooks` SET `Count` = $count WHERE `AvailableBooks`.`ID` = $avlID";
+        $addCountQuery = "UPDATE `AvailableBooks` SET `Count` = $count, `AvailableCount` = $availableCount WHERE `ID` = $avlID";
         $conn->query($addCountQuery);
         echo "<strong class='report'>Record updated successfully</strong>";
-        include 'ShowTable.php';
+        include '../ServerScripts/ShowTable.php';
     }
     else{
         // Adding New Book
-        $insertNewRecordQuery = "INSERT INTO AvailableBooks (Title, Author, Category, Language, count)
-VALUES ('$title', '$author', '$category', '$language', '$count')";
+        $insertNewRecordQuery = "INSERT INTO AvailableBooks (Title, Author, Category, Language, Count, AvailableCount)
+VALUES ('$title', '$author', '$category', '$language', '$count', $count)";
         $conn->query($insertNewRecordQuery);
         echo "<strong class='report'>New Record inserted successfully</strong>";
-        include 'ShowTable.php';
+        include '../ServerScripts/ShowTable.php';
     }
 
     echo '<a href="AddBook.html"><button>Back</button>';

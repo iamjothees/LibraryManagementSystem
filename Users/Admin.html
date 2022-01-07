@@ -41,6 +41,7 @@
                     <span class="features" id="addUser" onclick="selection(this.id)">Add User</span>
                     <span class="features" id="searchBook" onclick="selection(this.id)">Search</span>
                     <span class="features" id="issueBook" onclick="selection(this.id)">Issue Book</span>
+                    <span class="features" id="outstandingBook" onclick="selection(this.id)">Outstanding Book</span>
                     <span class="features" id="Report" onclick="selection(this.id)">Report</span>
                 </div>
             </div>
@@ -71,7 +72,9 @@
                 case 'searchBook':
                 window.location.href = ("../Features/SearchBook/SearchBook.html");break;
                 case 'issueBook':
-                window.location.href = ("../Features/IssueBook/IB.php");break;
+                window.location.href = ("../Features/IssueBook/IssueBook.php");break;
+                case 'outstandingBook':
+                window.location.href = ("../Features/ReturnBook/ReturnBook.php");break;
                 default:break;} 
         }
     </script>

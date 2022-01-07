@@ -33,14 +33,15 @@
             <tr style="border-bottom: 1em solid black;">
                 <th>ID</th> <th>Title</th> <th>Author</th>
                 <th>Category</th> <th>Language</th> <th>Count</th>
+                <th>Available</th>
             </tr>';
-    include '/Library Management System/ServerScripts/DatabaseConnection.php';
+    include 'DatabaseConnection.php';
     global $conn;
     $selectAllQuery = "SELECT * FROM AvailableBooks";
     $display = $conn->query($selectAllQuery);
     while ( $displayRow = $display->fetch_assoc()){
         echo "<tr>" . "<td>".   $displayRow['ID'] . "</td> <td>" .  $displayRow['Title'] . "</td> <td>" .  $displayRow['Author'] . "</td> <td>" .
-        $displayRow['Category'] . "</td> <td>" .  $displayRow['Language'] . "</td> <td>" .  $displayRow['Count'] . "</tr>" . "<br>";
+        $displayRow['Category'] . "</td> <td>" .  $displayRow['Language'] . "</td> <td>" .  $displayRow['Count'] . "</td> <td>" .  $displayRow['AvailableCount'] . "</td> </tr>" . "<br>";
     }
     echo '
         </table>
