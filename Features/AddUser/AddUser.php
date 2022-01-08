@@ -16,13 +16,7 @@
 </style>
 
 <?php
-    $serverName = "localhost";
-    $userName = "root";
-    $password = "";
-    $dbName = "LibMS";
-    
-    // Create connection
-    $conn = new mysqli($serverName, $userName, $password, $dbName);
+    include '../ServerScripts/DatabaseConnection.php';
 
     //get values from form
     $name = $_POST['name'];
