@@ -24,5 +24,5 @@
 
     //Show Table
     include '../ServerScripts/ShowTable.php';
-    echo "<a href='ReturnBook.php'><button>&lt&lt</button></a>";
+    echo "<a href='ReturnBook.php'><button>&lt&lt&lt</button></a>";
 ?>

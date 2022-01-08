@@ -1,3 +1,11 @@
+<style>
+    .center{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
 <?php
     session_start();
 
@@ -13,7 +21,7 @@
         $result = $conn->query($query1);
         
         while ($resultRow = $result->fetch_assoc()){
-            echo "$_SESSION[userID] == $resultRow[UserID] && $_SESSION[pwd]==$resultRow[Password]<br>";
+            //echo "$_SESSION[userID] == $resultRow[UserID] && $_SESSION[pwd]==$resultRow[Password]<br>";
             if ($_SESSION['userID']== $resultRow['UserID'] && $_SESSION['pwd']==$resultRow['Password']){
                 header("location:../../Users/Member.html");
                 $loginFlag=true;
@@ -21,7 +29,8 @@
         }
 
         if ($loginFlag == false){
-            echo "UserID Or Password Wrong";
+            echo "<div style='font-size: larger; font-weight: bold;' class='center'>UserId or Password Wrong</div>";
+            echo "<a href='../Login.html'><button>&lt&lt&lt</button></a>";
         }
     }
 ?>

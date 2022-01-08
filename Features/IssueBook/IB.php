@@ -7,11 +7,11 @@
         echo $issueDate;
     } */
 
-    if(isset($_POST['issueButton']))
+    /* if(isset($_POST['issueButton']))
     {
         $issueDate = date('d-m-Y', time());
         echo "Time the button was clicked: " . $issueDate . "<br>";
-    }
+    } */
 
     //Set Requested orderID
     $orderID =  $_POST['issueButton'];
@@ -36,5 +36,5 @@
 
     //Show Table
     include '../ServerScripts/ShowTable.php';
-    echo "<a href='IssueBook.php'><button>&lt&lt</button></a>";
+    echo "<a href='IssueBook.php'><button>&lt&lt&lt</button></a>";
 ?>

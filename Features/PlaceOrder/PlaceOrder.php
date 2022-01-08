@@ -8,6 +8,12 @@
         font-size: large;
         display: inline-block;
     }
+
+    .report{
+        display: flex;
+        justify-content: center;
+        font-size: x-large;
+    }
 </style>
 
 <?php
@@ -21,6 +27,6 @@
 
     $query1 = "INSERT INTO OrderedBooks(UserID, BookID) Value('$userID', $bookID)";
     $conn->query($query1);
-    echo "Order Placed";
-    echo  '<a href="../../Users/Member.html"><button class="backButton">&lt&lt</button> </a>';
+    echo "<strong class='report' style='margin-top:5em'>Order Placed</strong><br>";
+    echo  '<a href="../../Users/Member.html"><button class="backButton">&lt&lt&lt</button> </a>';
 ?>

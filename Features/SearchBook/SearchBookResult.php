@@ -27,7 +27,7 @@
 
             .viewOrderButton{
                 padding : 1em;
-                font-size: medium;
+                font-size: large;
                 font-weight: bold;
             }
 
@@ -81,19 +81,23 @@
 
                     //Check for empty result
                     if ($queryRow->num_rows>0){
-                        echo '<table> <tr style="border-bottom: 1em solid black;"> <th>ID</th> <th>Title</th> <th>Author</th>
+                        echo '<table> <tr style="border-bottom: 1em solid black;">
+                        <th>S.no</th> <th>ID</th> <th>Title</th> <th>Author</th>
                         <th>Category</th> <th>Language</th> <th>Available Count</th> </tr>';
                         if ($_SESSION['userID'] != 'Admin'){
                             echo "<form method='POST' action='../PlaceOrder/PlaceOrder.php'>";
+
+                            $i=0;
                             while ($displayRow = $queryRow->fetch_assoc()){                           
-                                echo "<tr>" . "<td>".  $displayRow['ID'] . "</td> <td>" . $displayRow['Title'] . "</td> <td>" . $displayRow['Author'] . "</td> <td>" .
+                                echo "<tr>" . "<td>".  ++$i . "</td> <td>" .  $displayRow['ID'] . "</td> <td>" . $displayRow['Title'] . "</td> <td>" . $displayRow['Author'] . "</td> <td>" .
                                 $displayRow['Category'] . "</td> <td>" . $displayRow['Language'] . "</td> <td>" . $displayRow['AvailableCount'] .
                                 "</td> <td><button value=" . $displayRow['ID'] . " name='placeOrderButton' class='placeOrderButton'>  Place Order   </button></td>" . "</tr>";
                             }
                         }else{
+                            $i=0;
                             while ($displayRow = $queryRow->fetch_assoc()){                           
-                                echo "<tr>" . "<td>".  $displayRow['ID'] . "</td> <td>" . $displayRow['Title'] . "</td> <td>" . $displayRow['Author'] . "</td> <td>" .
-                                $displayRow['Category'] . "</td> <td>" . $displayRow['Language'] . "</td> <td>" . $displayRow['Count'] . "</td>" . "</tr>";
+                                echo "<tr>" . "<td>" .  ++$i . "</td> <td>" .  $displayRow['ID'] . "</td> <td>" . $displayRow['Title'] . "</td> <td>" . $displayRow['Author'] . "</td> <td>" .
+                                $displayRow['Category'] . "</td> <td>" . $displayRow['Language'] . "</td> <td>" . $displayRow['AvailableCount'] . "</td>" . "</tr>";
                             }
                         }
                         echo "</table>" . "</form>";
@@ -105,10 +109,10 @@
             ?>
         </div>
         <br>
-        <a href="SearchBook.html"><button class="backButton" style="display: inline-block;">&lt&lt</button> </a>
+        <a href="SearchBook.html"><button class="backButton" style="display: inline-block;">&lt&lt&lt</button> </a>
         <?php
             if ($_SESSION['userID'] == 'Admin')
-                echo '<a href="../IssueBook/IssueBook.php" class="center" class="viewOrderButton"><button>View Order</button> </a>';
+                echo '<a href="../IssueBook/IssueBook.php" class="center viewOrderButton"><button>View Order</button> </a>';
         ?>
     </body>
 </html>

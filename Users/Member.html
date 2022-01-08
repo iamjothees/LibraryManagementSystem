@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             .bg{
-                background-image:url(../../Images/Background.jpg);
+                background-image:url(../Images/Background.jpg);
                 background-color: blueviolet;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -39,7 +39,7 @@
             <div class="center">
                 <div id="features">
                     <span class="features" id="searchBook" onclick="selection(this.id)">Search</span>
-                    <span class="features" id="dueDate" onclick="selection(this.id)">Due Date</span>
+                    <!-- <span class="features" id="dueDate" onclick="selection(this.id)">Due Date</span> -->
                 </div>
             </div>
         </div>
@@ -64,8 +64,8 @@
             switch(id){
                 case 'searchBook':
                 window.location.href = ("../Features/SearchBook/SearchBook.html");break;
-                case 'issueBook':
-                window.location.href = ("Features/IssueBook/IssueBook1.php");break;
+                /* case 'issueBook':
+                window.location.href = ("Features/IssueBook/IssueBook1.php");break; */
                 default:break;} 
         }
     </script>

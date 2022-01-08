@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .bg {
-            background-image: url(../../../Images/Background.jpg);
+            background-image: url(../../Images/Background.jpg);
             background-color: blueviolet;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -29,7 +29,7 @@
 
         .containerBG {
             position: absolute;
-            width: 800px;
+            width: 700px;
             height: 400px;
             margin-top: 1.5em;
             background-color: beige;
@@ -78,7 +78,7 @@
     </style>
 </head>
 
-<body class="bg">
+<body class="bg" onload="changeWidth()">
     <div class="center">
         <div class="container">
             <div class="center">
@@ -87,7 +87,9 @@
             </div>
 
             <form method="POST" action="SearchBookResult.php">
-                <input type="text" name="keyword" size=50><br>
+                <div class="center">
+                    <input type="text" name="keyword" size=50><br>
+                </div>
                 <div class="center">
                     <span>By</span>
                     <select name="searchIn">
@@ -111,19 +113,40 @@
                 <input type="submit" value="Search">
             </form>
         </div>
+    </div>
 
         <a href="../../Users/Admin.html"><button class="backButton">&lt&lt&lt</button></a>
 </body>
 
 <script>
     function changeWidth() {
-        if (window.screen.width < 800) {
+        if (window.screen.width < 700) {
             document.getElementsByClassName('containerBG')[0].style.width = "90%";
-            document.getElementsByName('keyword')[0].setAttribute('size', '27');
+            document.getElementsByClassName('containerBG')[0].style.height = "60%";
+            document.getElementsByName('keyword')[0].setAttribute('size', '25');
+            document.getElementsByTagName('input')[1].style.fontSize = "small";
+            document.getElementsByTagName('input')[1].style.padding = "0.8em 2em";
+        
+            x = document.getElementsByTagName('select');
+            y = document.getElementsByTagName('span');
+            for (i=0; i<x.length; i++){
+                x[i].style.fontSize = ".7em";
+                y[i].style.fontSize = "small";
+            }
         }
         else {
-            document.getElementsByClassName('containerBG')[0].style.width = "800px%";
+            document.getElementsByClassName('containerBG')[0].style.width = "700px";
+            document.getElementsByClassName('containerBG')[0].style.height = "400px";
             document.getElementsByName('keyword')[0].setAttribute('size', '50');
+            document.getElementsByTagName('input')[1].style.fontSize = "medium";
+            document.getElementsByTagName('input')[1].style.padding = "0.8em 5em";
+        
+            x = document.getElementsByTagName('select');
+            y = document.getElementsByTagName('span');
+            for (i=0; i<x.length; i++){
+                x[i].style.fontSize = "large";
+                y[i].style.fontSize = "large";
+            }
 
         }
     }
