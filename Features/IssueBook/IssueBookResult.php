@@ -26,3 +26,9 @@
     include '../ServerScripts/ShowTable.php';
     echo "<a href='IssueBook.php'><button>&lt&lt</button></a>";
 ?>
+
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>

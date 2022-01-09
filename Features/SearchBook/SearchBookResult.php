@@ -109,7 +109,7 @@
             ?>
         </div>
         <br>
-        <a href="SearchBook.html"><button class="backButton" style="display: inline-block;">&lt&lt&lt</button> </a>
+        <a href="SearchBook.php"><button class="backButton" style="display: inline-block;">&lt&lt&lt</button> </a>
         <?php
             if ($_SESSION['userID'] == 'Admin')
                 echo '<a href="../IssueBook/IssueBook.php" class="center viewOrderButton"><button>View Order</button> </a>';

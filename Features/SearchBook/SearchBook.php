@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $user = $_SESSION['userID'];
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -88,7 +93,7 @@
 
             <form method="POST" action="SearchBookResult.php">
                 <div class="center">
-                    <input type="text" name="keyword" size=50><br>
+                    <input type="text" name="keyword" size=50 placeholder="(SHOW ALL)"><br>
                 </div>
                 <div class="center">
                     <span>By</span>
@@ -108,7 +113,7 @@
                         <option value="Thriller Fiction">Thriller Fiction</option>
                         <option value="Romance Fiction">Romance Fiction</option>
                         <option value="Computer Science">Computer Science</option>
-                        <option value="Others">Others</option>
+                        <option value="Undefined">Undefined</option>
                     </select><br>
                 </div>
                 <input type="submit" value="Search">
@@ -116,7 +121,12 @@
         </div>
     </div>
 
-        <a href="../../Users/Admin.html"><button class="backButton">&lt&lt&lt</button></a>
+    <?php
+        if ($user == "Admin")
+            echo    '<a href="../../Users/Admin.html"><button class="backButton">&lt&lt&lt</button></a>';
+        else
+        echo    '<a href="../../Users/Member.html"><button class="backButton">&lt&lt&lt</button></a>';
+    ?>
 </body>
 
 <script>
